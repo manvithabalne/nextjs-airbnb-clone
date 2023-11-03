@@ -15,7 +15,7 @@ import {
   IsDate,
   IsString,
   ValidateNested,
-  IsInt,
+  IsNumber,
   IsOptional,
 } from "class-validator";
 import { Type } from "class-transformer";
@@ -73,7 +73,7 @@ class Listing {
   })
   @IsString()
   @Field(() => String)
-  locationType!: string;
+  locationtype!: string;
 
   @ApiProperty({
     required: true,
@@ -94,7 +94,7 @@ class Listing {
   })
   @IsJSONValue()
   @Field(() => GraphQLJSON)
-  placeAmeneites!: JsonValue;
+  placeAmeneties!: JsonValue;
 
   @ApiProperty({
     required: true,
@@ -109,13 +109,13 @@ class Listing {
   })
   @IsString()
   @Field(() => String)
-  placetype!: string;
+  placeType!: string;
 
   @ApiProperty({
     required: true,
     type: Number,
   })
-  @IsInt()
+  @IsNumber()
   @Field(() => Number)
   price!: number;
 

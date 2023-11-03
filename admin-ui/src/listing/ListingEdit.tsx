@@ -29,13 +29,13 @@ export const ListingEdit = (props: EditProps): React.ReactElement => {
           <SelectInput optionText={UserTitle} />
         </ReferenceInput>
         <div />
-        <TextInput label="locationType" source="locationType" />
+        <TextInput label="locationtype" source="locationtype" />
         <div />
         <div />
         <div />
         <div />
-        <TextInput label="placetype" source="placetype" />
-        <NumberInput step={1} label="price" source="price" />
+        <TextInput label="placeType" source="placeType" />
+        <NumberInput label="price" source="price" />
         <TextInput label="title" source="title" />
         <ReferenceArrayInput
           source="trips"

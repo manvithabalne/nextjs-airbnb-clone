@@ -6,7 +6,6 @@ import {
   CallHandler,
 } from "@nestjs/common";
 import request from "supertest";
-import { MorganModule } from "nest-morgan";
 import { ACGuard } from "nest-access-control";
 import { DefaultAuthGuard } from "../../auth/defaultAuth.guard";
 import { ACLModule } from "../../auth/acl.module";
@@ -22,9 +21,9 @@ const CREATE_INPUT = {
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
-  locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
+  locationtype: "exampleLocationtype",
+  placeType: "examplePlaceType",
+  price: 42.42,
   title: "exampleTitle",
   updatedAt: new Date(),
 };
@@ -32,9 +31,9 @@ const CREATE_RESULT = {
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
-  locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
+  locationtype: "exampleLocationtype",
+  placeType: "examplePlaceType",
+  price: 42.42,
   title: "exampleTitle",
   updatedAt: new Date(),
 };
@@ -43,9 +42,9 @@ const FIND_MANY_RESULT = [
     createdAt: new Date(),
     description: "exampleDescription",
     id: "exampleId",
-    locationType: "exampleLocationType",
-    placetype: "examplePlacetype",
-    price: 42,
+    locationtype: "exampleLocationtype",
+    placeType: "examplePlaceType",
+    price: 42.42,
     title: "exampleTitle",
     updatedAt: new Date(),
   },
@@ -54,9 +53,9 @@ const FIND_ONE_RESULT = {
   createdAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
-  locationType: "exampleLocationType",
-  placetype: "examplePlacetype",
-  price: 42,
+  locationtype: "exampleLocationtype",
+  placeType: "examplePlaceType",
+  price: 42.42,
   title: "exampleTitle",
   updatedAt: new Date(),
 };
@@ -120,7 +119,7 @@ describe("Listing", () => {
         },
       ],
       controllers: [ListingController],
-      imports: [MorganModule.forRoot(), ACLModule],
+      imports: [ACLModule],
     })
       .overrideGuard(DefaultAuthGuard)
       .useValue(basicAuthGuard)
@@ -184,7 +183,7 @@ describe("Listing", () => {
   });
 
   test("POST /listings existing resource", async () => {
-    let agent = request(app.getHttpServer());
+    const agent = request(app.getHttpServer());
     await agent
       .post("/listings")
       .send(CREATE_INPUT)

@@ -31,12 +31,12 @@ export const ListingList = (props: ListProps): React.ReactElement => {
           <TextField source={USER_TITLE_FIELD} />
         </ReferenceField>
         <TextField label="locationData" source="locationData" />
-        <TextField label="locationType" source="locationType" />
+        <TextField label="locationtype" source="locationtype" />
         <TextField label="mapData" source="mapData" />
         <TextField label="photos" source="photos" />
-        <TextField label="placeAmeneites" source="placeAmeneites" />
+        <TextField label="placeAmeneties" source="placeAmeneties" />
         <TextField label="placeSpace" source="placeSpace" />
-        <TextField label="placetype" source="placetype" />
+        <TextField label="placeType" source="placeType" />
         <TextField label="price" source="price" />
         <TextField label="title" source="title" />
         <DateField source="updatedAt" label="Updated At" />

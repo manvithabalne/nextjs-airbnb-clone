@@ -6,12 +6,12 @@ export type ListingOrderByInput = {
   id?: SortOrder;
   listingCreatedById?: SortOrder;
   locationData?: SortOrder;
-  locationType?: SortOrder;
+  locationtype?: SortOrder;
   mapData?: SortOrder;
   photos?: SortOrder;
-  placeAmeneites?: SortOrder;
+  placeAmeneties?: SortOrder;
   placeSpace?: SortOrder;
-  placetype?: SortOrder;
+  placeType?: SortOrder;
   price?: SortOrder;
   title?: SortOrder;
   updatedAt?: SortOrder;

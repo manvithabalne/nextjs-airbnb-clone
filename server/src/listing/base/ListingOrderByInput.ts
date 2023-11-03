@@ -83,7 +83,7 @@ class ListingOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  locationType?: SortOrder;
+  locationtype?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -116,7 +116,7 @@ class ListingOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  placeAmeneites?: SortOrder;
+  placeAmeneties?: SortOrder;
 
   @ApiProperty({
     required: false,
@@ -138,7 +138,7 @@ class ListingOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  placetype?: SortOrder;
+  placeType?: SortOrder;
 
   @ApiProperty({
     required: false,

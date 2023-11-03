@@ -7,12 +7,12 @@ export type ListingCreateInput = {
   description: string;
   listingCreatedBy: UserWhereUniqueInput;
   locationData: InputJsonValue;
-  locationType: string;
+  locationtype: string;
   mapData: InputJsonValue;
   photos: InputJsonValue;
-  placeAmeneites: InputJsonValue;
+  placeAmeneties: InputJsonValue;
   placeSpace: InputJsonValue;
-  placetype: string;
+  placeType: string;
   price: number;
   title: string;
   trips?: TripCreateNestedManyWithoutListingsInput;
