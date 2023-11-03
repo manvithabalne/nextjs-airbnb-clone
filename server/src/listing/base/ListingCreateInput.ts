@@ -112,7 +112,7 @@ class ListingCreateInput {
   title!: string;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => TripCreateNestedManyWithoutListingsInput,
   })
   @ValidateNested()
@@ -124,7 +124,7 @@ class ListingCreateInput {
   trips?: TripCreateNestedManyWithoutListingsInput;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: () => WishlistCreateNestedManyWithoutListingsInput,
   })
   @ValidateNested()
